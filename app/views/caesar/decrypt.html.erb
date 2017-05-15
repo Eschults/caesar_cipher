@@ -1,0 +1,18 @@
+<h1>Voici les messages décryptés</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <p>You took <%= @elapsed_time %> to decrypt the input</p>
+      <ol class="list-group">
+        <% @decrypted_possibilities.each_with_index do |possibility, index| %>
+          <li class="list-group-item">
+            <span class="badge"><%= index + 1 %></span>
+            <%= possibility %>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</div>
+
